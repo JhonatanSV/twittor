@@ -19,6 +19,7 @@ func Handlers() {
 	}
 
 	handler := cors.AllowAll().Handler(router)
+	
 	log.Fatal(http.ListenAndServe(":"+PORT, handler))
 
 }
