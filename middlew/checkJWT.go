@@ -12,7 +12,7 @@ func CheckJWT(next http.HandlerFunc) http.HandlerFunc {
 		_, _, _, err := routers.ProcessToken(r.Header.Get("Authorization"))
 
 		if err != nil {
-			http.Error(w, "Error with the token"+err.Error(), http.StatusBadRequest)
+			http.Error(w, "Error with the token "+err.Error(), http.StatusBadRequest)
 			return
 		}
 		next.ServeHTTP(w, r)

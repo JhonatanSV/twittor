@@ -12,12 +12,12 @@ import (
 //Mail is the value of the mail used in every EndPoint
 var Mail string
 
-//IDUsuario is the value of the user used in every EndPoint
-var IDUsuario string
+//UserID is the value of the user used in every EndPoint
+var UserID string
 
 //ProcessToken works with the token to extract its values
 func ProcessToken(tk string) (*models.Claim, bool, string, error) {
-	myKey := []byte("MastersDelDesarrollo_grupodefacebook")
+	myKey := []byte("MastersDelDesarrollo_grupodeFacebook")
 	claims := &models.Claim{}
 
 	splitToken := strings.Split(tk, "Bearer")
@@ -35,9 +35,9 @@ func ProcessToken(tk string) (*models.Claim, bool, string, error) {
 		_, found, _ := db.CheckUserExist(claims.Mail)
 		if found == true {
 			Mail = claims.Mail
-			IDUsuario = claims.ID.Hex()
+			UserID = claims.ID.Hex()
 		}
-		return claims, found, IDUsuario, nil
+		return claims, found, UserID, nil
 	}
 
 	if !tkn.Valid {
