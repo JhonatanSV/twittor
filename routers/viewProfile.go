@@ -8,6 +8,7 @@ import (
 	"github.com/JhonatanSV/Twittor/db"
 )
 
+//ViewProfile allows to extract the values of the user profile
 func ViewProfile(w http.ResponseWriter, r *http.Request) {
 
 	ID := r.URL.Query().Get("id")
