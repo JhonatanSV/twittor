@@ -2,7 +2,6 @@ package routers
 
 import (
 	"encoding/json"
-	"enconding/json"
 	"net/http"
 
 	"github.com/JhonatanSV/Twittor/db"
