@@ -16,7 +16,7 @@ func ReadTweets(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if len(r.URL.Query().Get("pagina")) < 1 {
+	if len(r.URL.Query().Get("page")) < 1 {
 		http.Error(w, "Have to send page parameter", http.StatusBadRequest)
 		return
 	}
