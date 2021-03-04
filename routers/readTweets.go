@@ -21,7 +21,7 @@ func ReadTweets(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	page, err := strconv.Atoi(r.URL.Query().Get("pagina"))
+	page, err := strconv.Atoi(r.URL.Query().Get("page"))
 	if err != nil {
 		http.Error(w, "Have to send the page parameter with a value greater than 0", http.StatusBadRequest)
 	}
