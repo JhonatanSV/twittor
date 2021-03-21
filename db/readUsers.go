@@ -20,8 +20,8 @@ func ReadUsers(ID string, page int64, search string, typeSearch string) ([]*mode
 	var results []*models.User
 
 	findOptions := options.Find()
-	findOptions.SetLimit((page - 1) * LimitPagination)
-	findOptions.SetSkip(LimitPagination)
+	findOptions.SetSkip((page - 1) * 20)
+	findOptions.SetLimit(20)
 
 	query := bson.M{
 		"name": bson.M{"$regex": `(?i)` + search},
