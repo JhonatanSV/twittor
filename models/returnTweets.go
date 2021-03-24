@@ -6,8 +6,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-//ReturnTweets is the struct of the tweet to being read
-type ReturnTweets struct {
+//ReturnTweet is the struct of the tweet to being read
+type ReturnTweet struct {
 	ID      primitive.ObjectID `bson:"_id" json:"_id,omitempty"`
 	UserID  string             `bson:"userid" json:"userid,omitempty"`
 	Message string             `bson:"message" json:"message,omitempty"`
