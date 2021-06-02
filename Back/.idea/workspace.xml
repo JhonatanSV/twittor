@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4167c856-dab6-4fb8-ad17-ff652ca8833d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Front/twittor/src/api/auth.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Front/twittor/src/utils/constants.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/twittor/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/twittor/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file://C:/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qBqk3IBYJSVZoKFN4cSPzKOiAR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.go" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="Go Build.go build github.com/JhonatanSV/Twittor">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../Twittor|$PROJECT_DIR$/main.go" />
+      <package value="github.com/JhonatanSV/Twittor" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Twittor main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../Twittor|$PROJECT_DIR$/main.go" />
+      <package value="github.com/JhonatanSV/Twittor" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/JhonatanSV/Twittor" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Twittor" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/JhonatanSV/Twittor" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/JhonatanSV/Twittor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+</project>
