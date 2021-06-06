@@ -4,11 +4,12 @@ import { values, size } from "lodash";
 import { toast } from "react-toastify";
 
 import { isMailValid } from "../../utils/validations";
-import { signInAPI } from "../../api/auth";
+import { signInAPI, setTokenAPI } from "../../api/auth";
 
 import "./SignInForm.scss";
 
-export default function SignInForm(params) {
+export default function SignInForm(props) {
+  const { setRefreshCheckLogin } = props;
   const [formData, setformData] = useState(initialFormValue());
   const [signInLoading, setsignInLoading] = useState(false);
 
@@ -32,7 +33,8 @@ export default function SignInForm(params) {
           if (response.message) {
             toast.warning(response.message);
           } else {
-            console.log(response.token);
+            setTokenAPI(response.token);
+            setRefreshCheckLogin(true);
           }
         })
         .catch(() => {

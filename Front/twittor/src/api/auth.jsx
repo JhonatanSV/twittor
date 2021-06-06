@@ -1,5 +1,5 @@
-import { result } from "lodash";
-import { API_HOST } from "../utils/constants";
+import { API_HOST, TOKEN } from "../utils/constants";
+import jwtDecode from "jwt-decode";
 
 export function signUpAPI(user) {
   console.log(user);
@@ -62,4 +62,40 @@ export function signInAPI(user) {
     .catch((err) => {
       return err;
     });
+}
+
+export function setTokenAPI(token) {
+  localStorage.setItem(TOKEN, token);
+}
+
+export function getTokenAPI() {
+  return localStorage.getItem(TOKEN);
+}
+
+export function logoutAPI() {
+  localStorage.removeItem(TOKEN);
+}
+
+export function isUserLoggedAPI() {
+  const token = getTokenAPI();
+
+  if (!token) {
+    logoutAPI();
+    return null;
+  }
+  if (isExpired(token)) {
+    logoutAPI();
+  }
+  return jwtDecode(token);
+}
+
+export function isExpired(token) {
+  const { exp } = jwtDecode(token);
+  const expire = exp * 1000;
+  const timeout = expire - Date.now();
+
+  if (timeout < 0) {
+    return true;
+  }
+  return false;
 }
