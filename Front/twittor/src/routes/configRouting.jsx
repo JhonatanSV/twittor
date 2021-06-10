@@ -1,8 +1,14 @@
 import Home from "../page/Home";
 import Error404 from "../page/Error404";
+import User from "../page/User";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
+  {
+    path: "/:id",
+    exact: true,
+    page: User,
+  },
   {
     path: "/",
     exact: true,

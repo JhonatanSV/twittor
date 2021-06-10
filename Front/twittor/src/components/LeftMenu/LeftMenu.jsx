@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { logoutAPI } from "../../api/auth";
+import useAuth from "../../hooks/useAuth";
 
 import LogoWhite from "../../assets/png/logo-white.png";
 
@@ -17,6 +18,7 @@ import "./LeftMenu.scss";
 
 export default function LeftMenu(props) {
   const { setRefreshCheckLogin } = props;
+  const user = useAuth();
 
   const logout = () => {
     logoutAPI();
@@ -35,7 +37,7 @@ export default function LeftMenu(props) {
         <FontAwesomeIcon icon={faUsers} />
         Usuarios
       </Link>
-      <Link to="/profile">
+      <Link to={`/${user?._id}`}>
         <FontAwesomeIcon icon={faUser} />
         Perfil
       </Link>
