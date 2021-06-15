@@ -19,6 +19,7 @@ function Users(props) {
   const [users, setUsers] = useState(null);
   const [typeUser, setTypeUser] = useState(params.type || "follow");
   const [inputSearch, setInputSearch] = useState("");
+  const [btnLoading, setBtnLoading] = useState(false);
 
   const onSearch = useDebouncedCallback((value) => {
     setUsers(null);
@@ -35,10 +36,20 @@ function Users(props) {
   useEffect(() => {
     getFollowersAPI(queryString.stringify(params))
       .then((response) => {
-        if (isEmpty(response)) {
-          setUsers([]);
+        // eslint-disable-next-line eqeqeq
+        if (params.page == 1) {
+          if (isEmpty(response)) {
+            setUsers([]);
+          } else {
+            setUsers(response);
+          }
         } else {
-          setUsers(response);
+          if (!response) {
+            setBtnLoading(0);
+          } else {
+            setUsers([...users, ...response]);
+            setBtnLoading(false);
+          }
         }
       })
       .catch(() => {
@@ -50,6 +61,7 @@ function Users(props) {
   const onChangeType = (type) => {
     setUsers(null);
     setInputSearch("");
+    setBtnLoading(false);
     if (type === "new") {
       setTypeUser("new");
     } else {
@@ -57,6 +69,14 @@ function Users(props) {
     }
     history.push({
       search: queryString.stringify({ type: type, page: 1, search: "" }),
+    });
+  };
+
+  const moreData = () => {
+    setBtnLoading(true);
+    const newPage = parseInt(params.page) + 1;
+    history.push({
+      search: queryString.stringify({ ...params, page: newPage }),
     });
   };
 
@@ -95,7 +115,22 @@ function Users(props) {
           Buscando Usuarios
         </div>
       ) : (
-        <ListUsers users={users} />
+        <>
+          <ListUsers users={users} />
+          <Button onClick={moreData} className="load-more">
+            {!btnLoading ? (
+              btnLoading !== 0 && "Cargar mas usuarios"
+            ) : (
+              <Spinner
+                animation="grow"
+                as="span"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+              />
+            )}
+          </Button>
+        </>
       )}
     </BasicLayout>
   );
