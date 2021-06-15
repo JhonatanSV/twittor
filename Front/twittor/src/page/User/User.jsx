@@ -15,7 +15,7 @@ import { getUserTweetsAPI } from "../../api/tweet";
 import "./User.scss";
 
 function User(props) {
-  const { match } = props;
+  const { setRefreshCheckLogin, match } = props;
   const { params } = match;
   const loggedUser = useAuth();
 
@@ -23,8 +23,6 @@ function User(props) {
   const [tweets, setTweets] = useState(null);
   const [page, setPage] = useState(1);
   const [loadingTweets, setLoadingTweets] = useState(false);
-
-  console.log(tweets);
 
   useEffect(() => {
     getUserApi(params.id)
@@ -66,7 +64,7 @@ function User(props) {
   };
 
   return (
-    <BasicLayout className="user">
+    <BasicLayout className="user" setRefreshCheckLogin={setRefreshCheckLogin}>
       <div className="user__title">
         <h2>
           {user ? `${user.name} ${user.lastName}` : "Este usuario no existe"}
