@@ -47,3 +47,22 @@ export function getUserTweetsAPI(user, page) {
       return err;
     });
 }
+
+export function getTweetsFollowingAPI(page = 1) {
+  const url = `${API_HOST}/readfollowerstweets?page=${page}`;
+
+  const params = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer${getTokenAPI()}`,
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      return err;
+    });
+}
