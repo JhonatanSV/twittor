@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./SignInSignUp.scss";
 import { Container, Row, Col, Button } from "react-bootstrap";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
