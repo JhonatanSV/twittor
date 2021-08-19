@@ -10,7 +10,7 @@ import (
 
 //MongoCN is the full connection
 var MongoCN = ConnectDB()
-var clientOptions = options.Client().ApplyURI("mongodb+srv://jsandovalv:twittor123*@ClusterTwittor.a224t.mongodb.net/ClusterTwittor?retryWrites=true&w=majority")
+var clientOptions = options.Client().ApplyURI("")
 
 /*ConnectDB allows to connect the DB*/
 func ConnectDB() *mongo.Client {
